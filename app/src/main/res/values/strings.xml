@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TabTest</string>
+    <string name="login">登 录</string>
+    <string name="main">首页</string>
+    <string name="media">媒体</string>
+    <string name="app">应用</string>
+    <string name="share">分享</string>
+    <string name="input_username">请填写用户名</string>
+    <string name="input_password">请填写密码</string>
+    <string name="error_dialog_title">登录失败</string>
+    <string name="error_dialog_message">用户名或密码错误，请重新输入</string>
+    <string name="error_dialog_positive">确定</string>
+    <string name="text_offline_login">离线登录</string>
+    <string name="text_sign_up">新用户注册</string>
+    <string name="quit_dialog_title">是否退出应用？</string>
+    <string name="quit_dialog_message">关闭电视播放器</string>
+    <string name="quit_dialog_positive">确定</string>
+    <string name="quit_dialog_negative">取消</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

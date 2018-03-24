@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
-    android:background="@android:color/transparent">
+    android:background="@drawable/quit_dialog_shape">
 
     <TextView
         android:id="@+id/quit_dialog_title"
@@ -38,8 +38,7 @@
             android:text="@string/quit_dialog_negative"
             android:textSize="16sp"
             android:textColor="#4477ff"
-            android:background="@drawable/quit_dialog_button_shape"
-            android:onClick="onCancelClick"/>
+            android:background="@drawable/quit_dialog_button_shape" />
 
         <Button
             android:id="@+id/quit_dialog_exit"
@@ -50,8 +49,7 @@
             android:text="@string/quit_dialog_positive"
             android:textSize="16sp"
             android:textColor="#ff5555"
-            android:background="@drawable/quit_dialog_button_shape"
-            android:onClick="onQuitClick"/>
+            android:background="@drawable/quit_dialog_button_shape" />
 
     </LinearLayout>
 

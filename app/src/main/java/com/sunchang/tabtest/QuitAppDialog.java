@@ -76,4 +76,8 @@ public class QuitAppDialog extends Dialog {
     public void setOnNegativeListener(View.OnClickListener listener) {
         negativeButton.setOnClickListener(listener);
     }
+
+    public void setTitle(String title) {
+        this.titleText.setText(title);
+    }
 }

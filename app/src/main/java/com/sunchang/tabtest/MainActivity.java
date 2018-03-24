@@ -175,27 +175,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View view = inflater.inflate(R.layout.quit_dialog, null);
-        builder.setView(view);
-        builder.setCancelable(false);
-        dialog = builder.show();
-        Window window = dialog.getWindow();
-        window.setBackgroundDrawableResource(R.drawable.quit_dialog_shape);
-
-        DisplayMetrics metrics = new DisplayMetrics();
-        this.getWindowManager().getDefaultDisplay().getMetrics(metrics);
-        WindowManager.LayoutParams params = window.getAttributes();
-        params.width = (int) (metrics.widthPixels * 0.9);
-        window.setAttributes(params);
-    }
-
-    public void onCancelClick(View view) {
-        dialog.dismiss();
-    }
-
-    public void onQuitClick(View view) {
-        this.finish();
+        final QuitAppDialog dialog = new QuitAppDialog(this);
+        dialog.setCancelable(true);
+        dialog.show();
+        dialog.setOnPositiveListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.this.finish();
+            }
+        });
+        dialog.setOnNegativeListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
     }
 }
